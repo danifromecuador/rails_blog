@@ -8,4 +8,12 @@ RSpec.describe User, type: :model do
     it 'it has a name' do
         expect(subject.name).to eq('Tom')
     end
+
+    it 'three_most_recent_posts' do
+        expect(subject.three_most_recent_posts).to eq([])
+    end
+
+    it 'post_counter' do
+        expect(subject.post_counter).to eq(0)
+    end
 end
