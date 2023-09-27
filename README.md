@@ -76,6 +76,8 @@ To run the project, execute the following commands, press enter after each line:
 
 ```sh
     bundle install
+    rails db:create
+    rails db:migrate
     rails s
 ```
 And open a webpage in your favorite web browser at [http://localhost:3000](http://localhost:3000)
