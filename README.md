@@ -82,6 +82,13 @@ To run the project, execute the following commands, press enter after each line:
 ```
 And open a webpage in your favorite web browser at [http://localhost:3000](http://localhost:3000)
 
+### Test
+
+To test this project just enter this command:
+
+```sh
+  rspec
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
