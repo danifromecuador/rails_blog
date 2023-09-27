@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/users", to: "users#index"
   get "/users/:id", to: "users#show"
   get "/users/:id/posts", to: "users#posts", as: :user_posts
+  get "/users/:id/posts/:id", to: "users#post", as: :user_post
 end

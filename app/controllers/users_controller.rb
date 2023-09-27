@@ -10,4 +10,11 @@ class UsersController < ApplicationController
   def posts
     # @posts = Post.where(user_id: params[:id])
   end
+
+  def post
+    # @post = Post
+    #   .where(user_id: params[:id])
+    #   .where(id: params[:id])
+    #   .first
+  end
 end
