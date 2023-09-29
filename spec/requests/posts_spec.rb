@@ -22,8 +22,8 @@ RSpec.describe '/users/:user_id/posts', type: :request do
   end
 
   describe 'GET /show' do
-    it 'response status is successful' do  
-      get "/users/#{first_user.id}/posts/#{first_post.id}"  
+    it 'response status is successful' do
+      get "/users/#{first_user.id}/posts/#{first_post.id}"
       expect(response).to be_successful
     end
 
@@ -39,6 +39,3 @@ RSpec.describe '/users/:user_id/posts', type: :request do
     end
   end
 end
-
-
-
