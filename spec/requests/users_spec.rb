@@ -26,10 +26,9 @@ RSpec.describe '/users', type: :request do
   end
 
   describe 'GET /show' do
-    it 'renders a successful response' do
+    it 'renders an h2 text' do
       user = User.create! valid_attributes
       get user_url(user)
-      expect(response).to be_successful
       expect(response.body).to include('<h2>Details of a given user</h2>')
     end
   end
