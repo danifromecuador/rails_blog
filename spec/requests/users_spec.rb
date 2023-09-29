@@ -1,34 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe '/users', type: :request do
-  let(:valid_attributes) do
-    {
-      name: 'Tom',
-      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-      bio: 'Teacher from Mexico.'
-    }
-  end
+  let(:first_user) { User.create(name: 'John', photo: 'https://example.com/john.jpg', bio: 'Some bio') }
 
   describe 'GET /index' do
-    it 'renders a successful response' do
-      User.create! valid_attributes
-      get users_url
+    it 'response status is successful' do
+      get '/users'
       expect(response).to be_successful
+    end
+
+    it 'renders the correct template' do
+      get '/users'
+      expect(response).to render_template('users/index')
+    end
+
+    it 'renders the right placeholder text' do
+      get '/users'
+      expect(response.body).to include('<h2>List of all users</h2>')
     end
   end
 
   describe 'GET /show' do
-    it 'renders a successful response' do
-      user = User.create! valid_attributes
-      get user_url(user)
+    it 'response status is successful' do
+      get "/users/#{first_user.id}"
       expect(response).to be_successful
     end
-  end
 
-  describe 'GET /show' do
-    it 'renders an h2 text' do
-      user = User.create! valid_attributes
-      get user_url(user)
+    it 'renders the correct template' do
+      get "/users/#{first_user.id}"
+      puts "Route: #{request.fullpath}"
+      expect(response).to render_template('users/show')
+    end
+
+    it 'renders the right placeholder text' do
+      get "/users/#{first_user.id}"
       expect(response.body).to include('<h2>Details of a given user</h2>')
     end
   end
