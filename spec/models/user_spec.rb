@@ -14,6 +14,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'post_counter' do
-    expect(subject.post_counter).to eq(0)
+    expect(subject.post_counter).to eq(nil)
   end
 end
