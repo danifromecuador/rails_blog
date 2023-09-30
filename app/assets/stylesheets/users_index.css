@@ -9,6 +9,7 @@
 .user-container {
   display: flex;
   justify-content: space-between;
+  column-gap: 5%;
 }
 
 .photo {
@@ -20,7 +21,7 @@
 
 .name-posts {
   border: 5px solid black;
-  width: 68%;
+  width: 100%;
 }
 
 .name {
