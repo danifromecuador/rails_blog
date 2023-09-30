@@ -17,7 +17,7 @@ RSpec.describe '/users/:user_id/posts', type: :request do
 
     it 'renders the right placeholder text' do
       get "/users/#{first_user.id}/posts"
-      expect(response.body).to include('<h2>List of all posts for a given user</h2>')
+      expect(response.body).to include('<div class="post-index">')
     end
   end
 
@@ -35,7 +35,7 @@ RSpec.describe '/users/:user_id/posts', type: :request do
 
     it 'renders the right placeholder text' do
       get "/users/#{first_user.id}/posts/#{first_post.id}"
-      expect(response.body).to include('<h2>Details of a given post of a given user</h2>')
+      expect(response.body).to include('<div class="post-show-container">')
     end
   end
 end
