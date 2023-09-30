@@ -11,6 +11,7 @@
 .post-container {
   border: 5px solid black;
   padding: 0 10px;
+  margin-bottom: 15px;
 }
 
 .user-posts-post-title {
@@ -39,8 +40,4 @@
   color: inherit;
   text-decoration: none;
   background-color: white;
-}
-
-.post-container {
-  margin-bottom: 15px;
 }
