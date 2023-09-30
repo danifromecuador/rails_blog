@@ -16,7 +16,7 @@ RSpec.describe '/users', type: :request do
 
     it 'renders the right placeholder text' do
       get '/users'
-      expect(response.body).to include('<h2>List of all users</h2>')
+      expect(response.body).to include('<ul class="user-index">')
     end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe '/users', type: :request do
 
     it 'renders the right placeholder text' do
       get "/users/#{first_user.id}"
-      expect(response.body).to include('<h2>Details of a given user</h2>')
+      expect(response.body).to include('<div class="user-index">')
     end
   end
 end
