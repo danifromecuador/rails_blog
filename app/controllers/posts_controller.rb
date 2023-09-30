@@ -7,8 +7,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end
-  
+
   def author_name
-  User.find_by(id: self.author_id)&.name
+    User.find_by(id: author_id)&.name
   end
 end
