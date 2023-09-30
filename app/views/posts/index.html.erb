@@ -28,9 +28,9 @@
       <% end %>
     </div>
       <div class="comments-for-each-post">
-        <% post.comments.each do |comment| %>
+        <% post.five_most_recent_comments.each do |comment| %>
           <p>
-            <%= User.find(comment.user_id).name %>: <%= comment.text %>
+            <%= comment.author.name %>: <%= comment.text %>
           </p>
         <% end %>
       </div>
