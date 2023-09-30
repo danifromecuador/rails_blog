@@ -20,7 +20,7 @@
   </div>
 
 <div class="user-posts">
-  <% @two_more_recent_posts.each do |post| %>
+  <% @user.three_most_recent_posts.each do |post| %>
     <div class="post-container">
       <%= link_to user_post_path(post.author, post) do %>
         <p class="user-posts-post-title"> <%= post.title %> </p>
