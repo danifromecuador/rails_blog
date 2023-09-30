@@ -40,3 +40,7 @@
   text-decoration: none;
   background-color: white;
 }
+
+.post-container {
+  margin-bottom: 15px;
+}

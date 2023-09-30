@@ -15,6 +15,7 @@
   border: 5px solid black;
   width: 100px;
   height: 100px;
+  object-fit: cover;
 }
 
 .name-posts {

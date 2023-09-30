@@ -1,27 +1,9 @@
-<%# class PostsController < ApplicationController
-  def index
-    @user = User.find(params[:id])
-    @posts = Post.where(author_id: params[:id])
-  end
-
-  # def show
-  #   @post = Post
-  #     .where(user_id: params[:id])
-  #     .where(id: params[:id])
-  #     .first
-  # end
-end %>
-
-
-<%# this is the url http://127.0.0.1:3000/users/5/posts %>
-
 <%= stylesheet_link_tag 'posts_index', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <div class="post-index">
   <div class="user-container">
-    <div class="photo">
-      <%= image_tag @user.photo %>
-    </div>
+    <img src="<%= @user.photo %>" alt="" class="photo">
+
     <div class="name-posts">
       <div class="name">
         <%= @user.name %>
@@ -43,10 +25,10 @@ end %>
         </div>    
         <p class="user-posts-post-comments-likes posts"> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
       </div>
-      <div class="comments">
+      <div class="comments-for-each-post">
         <% post.comments.each do |comment| %>
           <p>
-            <%= comment.user %>: <%= comment.text %>
+            <%= User.find(comment.user_id).name %>: <%= comment.text %>
           </p>
         <% end %>
       </div>

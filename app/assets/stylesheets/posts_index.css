@@ -37,6 +37,7 @@
   border: 5px solid black;
 }
 
-/* .post-comments {
-
-} */
+.comments-for-each-post {
+  border: 5px solid black;
+  margin: 3px 0 25px 0;
+}
