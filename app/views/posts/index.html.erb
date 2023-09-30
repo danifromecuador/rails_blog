@@ -16,15 +16,17 @@
 
   <div class="posts-container">
     <% @posts.each do |post| %>
-      <div class="post">
+    <div class="post">
+      <%= link_to user_post_path(post.author, post) do %>
         <div class="post-title">
           <%= post.title %>
         </div>
         <div class="post-text">
           <%= post.text %>
-        </div>    
+        </div>
         <p class="user-posts-post-comments-likes posts"> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
-      </div>
+      <% end %>
+    </div>
       <div class="comments-for-each-post">
         <% post.comments.each do |comment| %>
           <p>
