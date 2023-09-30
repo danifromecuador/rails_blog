@@ -1,1 +1,37 @@
-<h2>Details of a given user</h2>
+<%= stylesheet_link_tag 'users_show', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="user-index">
+  <div class="user-container">
+    <div class="photo">
+      <%= image_tag @user.photo %>
+    </div>
+    <div class="name-posts">
+      <div class="name">
+        <%= @user.name %>
+      </div>
+      <div class="posts">
+        <p>Number of posts: <%= @user.posts.count %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-bio-container">
+    <p class="bio-title">Bio</p>
+    <p class="bio-content"><%= @user.bio %></p>  
+  </div>
+
+  <div class="user-posts">
+    <% @posts.each do |post| %>
+      <div class="post-container">
+        <p class="user-posts-post-title"> <%= post.title %> </p>
+        <p class="user-posts-post-text"> <%= post.text %> </p>
+        <p class="user-posts-post-comments-likes"> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
+      </div>
+    <% end %>
+  </div>
+
+  <button class="see-all-posts-btn">
+    <%= link_to "See all posts", user_posts_path(@user), class:"link-btn"%>
+  </button>
+
+</div>

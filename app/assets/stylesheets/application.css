@@ -13,18 +13,17 @@
  *= require_tree .
  *= require_self
  */
- body {
-  margin: 0;
+body {
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
-
+  border: 1px solid red;
   width: 480px;
   height: 100vh;
-  margin: 0 auto;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
