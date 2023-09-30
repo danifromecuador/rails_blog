@@ -1,1 +1,39 @@
-<h2>List of all posts for a given user</h2>
+<%= stylesheet_link_tag 'posts_index', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="post-index">
+  <div class="user-container">
+    <img src="<%= @user.photo %>" alt="" class="photo">
+
+    <div class="name-posts">
+      <div class="name">
+        <%= @user.name %>
+      </div>
+      <div class="posts">
+        <p>Number of posts: <%= @user.posts.count %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="posts-container">
+    <% @posts.each do |post| %>
+    <div class="post">
+      <%= link_to user_post_path(post.author, post) do %>
+        <div class="post-title">
+          <%= post.title %>
+        </div>
+        <div class="post-text">
+          <%= post.text %>
+        </div>
+        <p class="user-posts-post-comments-likes posts"> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
+      <% end %>
+    </div>
+      <div class="comments-for-each-post">
+        <% post.five_most_recent_comments.each do |comment| %>
+          <p>
+            <%= comment.author.name %>: <%= comment.text %>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

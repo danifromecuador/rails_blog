@@ -1,0 +1,30 @@
+.post-show-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.post-show {
+  border: 5px solid black;
+  padding-left: 10px;
+}
+
+.post-by-username {
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-posts-post-comments-likes {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: right;
+}
+
+.comments {
+  border: 5px solid black;
+  margin: 3px 0 25px 0;
+  padding: 10px;
+}

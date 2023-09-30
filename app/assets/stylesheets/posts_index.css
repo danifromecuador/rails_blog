@@ -1,0 +1,55 @@
+
+.post-index {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo {
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.name-posts {
+  border: 5px solid black;
+  width: 100%;
+}
+
+.name {
+  font-size: 42px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.posts {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.post {
+  border: 5px solid black;
+}
+
+.post-title {
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.post-text {
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+.comments-for-each-post {
+  border: 5px solid black;
+  margin: 3px 0 25px 0;
+  padding: 10px;
+}
