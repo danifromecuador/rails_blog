@@ -23,8 +23,11 @@ body {
 }
 
 ul,
-li {
+li,
+a {
+  color: inherit;
   list-style: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }

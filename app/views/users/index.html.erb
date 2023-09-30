@@ -2,18 +2,24 @@
 
 <ul class="user-index">
   <% @users.each do |user| %>
-    <li class="user-container">
-      <div class="photo">
-        <%= image_tag user.photo %>
-      </div>
-      <div class="name-posts">
-        <div class="name">
-          <%= user.name %>
+    <li>
+      <%= link_to user_path(user), class:"user-container" do %>
+        <div class="photo">
+          <%= image_tag user.photo %>
         </div>
-        <div class="posts">
-          <p>Number of posts: <%= user.posts.count %></p>
+        <div class="name-posts">
+          <div class="name">
+            <%= user.name %>
+          </div>
+          <div class="posts">
+            <p>Number of posts: <%= user.posts.count %></p>
+          </div>
         </div>
-      </div>
+      <% end %>
     </li>
   <% end %>
 </ul>
+
+
+
+<%# path = app/views/users/index.html.erb %>
