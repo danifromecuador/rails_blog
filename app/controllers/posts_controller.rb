@@ -5,7 +5,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+    @comments = @post.comments
+    @comment = Comment.new
   end
 
   def author_name
@@ -14,15 +17,15 @@ class PostsController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
-    @post = Post.new
+    @post = @user.posts.new
   end
 
   def create
     @user = User.find(params[:user_id])
-    @post = @user.posts.create(post_params)
+    @post = @user.posts.new(post_params)
 
     if @post.save
-      redirect_to user_posts_path(@user)
+      redirect_to user_posts_path(@user, @post)
     else
       render :new
     end

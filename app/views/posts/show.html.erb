@@ -9,11 +9,13 @@
     <p><%= @post.text %></p>
   </div>
 
+  <%= link_to 'New Comment', new_user_post_comment_path(@user, @post), class:"new-comment-btn" %>
+
   <div class="comments">
     <h2>Comments</h2>
     <% @post.comments.each do |comment| %>
       <div class="comment">
-        <p><%= comment.text %></p>
+        <p><%= comment.user.name %>: <%= comment.text %></p>
       </div>
     <% end %>
   </div>

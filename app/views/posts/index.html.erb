@@ -14,6 +14,8 @@
     </div>
   </div>
 
+  <%= link_to "New Post", new_user_post_path(@user), class:"new-post-btn" %>
+
   <div class="posts-container">
     <% @posts.each do |post| %>
     <div class="post">
@@ -30,13 +32,10 @@
       <div class="comments-for-each-post">
         <% post.five_most_recent_comments.each do |comment| %>
           <p>
-            <%= comment.author.name %>: <%= comment.text %>
+            <%= User.find(params[:user_id]).name %>: <%= comment.text %>
           </p>
         <% end %>
       </div>
     <% end %>
   </div>
-
-  <%= link_to "New Post", new_user_post_path(@user), class:"new-post-btn" %>
-
 </div>
