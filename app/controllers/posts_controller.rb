@@ -20,6 +20,13 @@ class PostsController < ApplicationController
     @post = @user.posts.new
   end
 
+  def like
+    @post = Post.find(params[:id])
+    current_user.like(@post)
+
+    redirect_to @post
+  end
+
   def create
     @user = User.find(params[:user_id])
     @post = @user.posts.new(post_params)
