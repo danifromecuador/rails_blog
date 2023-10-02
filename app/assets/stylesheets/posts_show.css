@@ -28,3 +28,19 @@
   margin: 3px 0 25px 0;
   padding: 10px;
 }
+
+.like-btn {
+  border: 5px solid black;
+  background-color: white;
+  margin: 5px 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.new-comment-btn {
+  width: fit-content;
+  border: 5px solid black;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+}
