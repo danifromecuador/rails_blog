@@ -74,7 +74,8 @@ To run the project, execute the following commands, press enter after each line:
     rails db:migrate
     rails s
 ```
-And open a webpage in your favorite web browser at [http://localhost:3000](http://localhost:3000)
+Maybe you'll need to change the DB name and password to your own.
+After that, open a webpage in your favorite web browser at [http://localhost:3000](http://localhost:3000)
 
 ### Test
 
