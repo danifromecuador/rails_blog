@@ -94,6 +94,11 @@ To test this project just enter this command:
 - GitHub: [danifromecuador](https://github.com/danifromecuador)
 - LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador)
 
+ 👤 **Alexandre Medina**
+
+- GitHub: [alexmedinasf](https://github.com/alexmedinasf)
+- LinkedIn: [alexmedinasf](https://www.linkedin.com/in/alexmedinasf)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
