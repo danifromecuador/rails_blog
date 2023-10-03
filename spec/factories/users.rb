@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :user do
-    name { 'Example User' }
-    # Add any other attributes you need for the User model
+    name { 'name' }
+    photo { 'photo' }
+    bio { 'bio' }
   end
 end
