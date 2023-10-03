@@ -33,20 +33,29 @@ RSpec.describe 'UsersIndex', type: :system do
 
   it 'shows the username of all users' do
     visit users_path
-    sleep(2)
+    sleep(1)
     expect(page).to have_content('Tom')
     expect(page).to have_content('Alice')
-
-    # Check if posts by users are displayed
-    # expect(page).to have_content('First Post by Tom')
-    # expect(page).to have_content('First Post by Alice')
-    # expect(page).to have_content('First Post by Bob')
   end
 
   it 'shows the profile picture for each user' do
     visit users_path
-    sleep(2)
+    sleep(1)
     expect(page).to have_selector("img[src='https://picsum.photos/seed/1/200']")
     expect(page).to have_selector("img[src='https://picsum.photos/seed/2/200']")
+  end
+
+  it 'shows the number of posts for each user' do
+    visit users_path
+    sleep(1)
+    expect(page).to have_content('Number of posts: 0')
+    expect(page).to have_content('Number of posts: 2')
+  end
+
+  it 'When I click on a user, I am redirected to that users show page' do
+    visit users_path
+    sleep(1)
+    click_link('Tom')
+    expect(page).to have_current_path(user_path(User.find_by(name: 'Tom')))
   end
 end
