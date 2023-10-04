@@ -29,6 +29,13 @@ RSpec.describe 'UsersIndex', type: :system do
       title: 'Second post by Tom',
       text: 'This is the content of the second post by Tom.'
     )
+
+    # FactoryBot.create(
+    #   :comment,
+    #   post: Post.find_by(title: 'First Post by Tom'),
+    #   author: User.find_by(name: 'Tom'),
+    #   text: 'This is the first comment on the first post by Tom.'
+    # )
   end
 
   #   <div class="post-index">
@@ -75,5 +82,29 @@ RSpec.describe 'UsersIndex', type: :system do
     tom = User.find_by(name: 'Tom')
     visit user_posts_path(tom)
     expect(page).to have_current_path(user_posts_path(tom))
+  end
+
+  it 'I can see the user name' do
+    tom = User.find_by(name: 'Tom')
+    visit user_posts_path(tom)
+    expect(page).to have_content('Tom')
+  end
+
+  it 'I can see the number of posts the user has written.' do
+    tom = User.find_by(name: 'Tom')
+    visit user_posts_path(tom)
+    expect(page).to have_content('Number of posts: 2')
+  end
+
+  it 'I can see a post title' do
+    tom = User.find_by(name: 'Tom')
+    visit user_posts_path(tom)
+    expect(page).to have_content('First Post by Tom')
+  end
+
+  it 'I can see some of the post body' do
+    tom = User.find_by(name: 'Tom')
+    visit user_posts_path(tom)
+    expect(page).to have_content('This is the content of the first post by Tom.')
   end
 end
