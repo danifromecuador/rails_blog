@@ -32,7 +32,7 @@
       <div class="comments-for-each-post">
         <% post.five_most_recent_comments.each do |comment| %>
           <p>
-            <%= User.find(params[:user_id]).name %>: <%= comment.text %>
+            <%= comment.user.name %>: <%= comment.text %>
           </p>
         <% end %>
       </div>

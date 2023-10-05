@@ -74,7 +74,9 @@ To run the project, execute the following commands, press enter after each line:
     rails db:migrate
     rails s
 ```
-And open a webpage in your favorite web browser at [http://localhost:3000](http://localhost:3000)
+
+Maybe you'll need to change the DB name and password to your own.
+After that, open a webpage in your favorite web browser at [http://localhost:3000](http://localhost:3000)
 
 ### Test
 
@@ -92,6 +94,11 @@ To test this project just enter this command:
 
 - GitHub: [danifromecuador](https://github.com/danifromecuador)
 - LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador)
+
+ 👤 **Alexandre Medina**
+
+- GitHub: [alexmedinasf](https://github.com/alexmedinasf)
+- LinkedIn: [alexmedinasf](https://www.linkedin.com/in/alexmedinasf)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
