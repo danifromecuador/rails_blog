@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
-  get 'likes/create'
-  get 'comments/new'
-  get 'comments/create'
+  devise_for :users, controllers: { sessions: 'users/sessions',
+                                    registrations: 'users/registrations',
+                                    passwords: 'users/passwords' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # Defines the root path route ('/')
+  root 'users#index'
 
-  root "users#index"
-  
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :new, :create] do
-      resources :comments, only: [:new, :create]
-      resource :likes, only: [:create]
+  # Route to list all users
+  # Route to show a specific user
+  resources :users, only: %i[index show] do
+    # Route to show all posts of a specific user
+    # Route to show a specific post of a specific user
+    resources :posts, only: %i[index new create show] do
+      resources :comments, only: %i[new create]
+      resources :likes, only: [:create]
     end
   end
 end
