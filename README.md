@@ -92,7 +92,7 @@ To test this project just enter this command:
 
 👤 **Dani Morillo**
 
-- GitHub: [danifromecuador](https://github.com/danifromecuador)
+- GitHub: [danifromecuador](https://github.com/danielfromecuador)
 - LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador)
 
  👤 **Alexandre Medina**
